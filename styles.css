@@ -1,0 +1,164 @@
+body{
+    background-color:#8f57fd;
+    font-family: 'Merriweather', serif;
+}
+
+.img_imagen{
+    height: 4em;
+    width: 10em;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_nav_perfil{
+    display: flex;
+    text-align: start;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.header_nav_perfil p{
+    color: #ffffff;
+    margin-left: 0.5em;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+   
+    
+}
+
+.header_nav ul{
+    display: none;/*ocultamos el display para que no se muestre sino que sea con el hover*/
+    list-style: none;/* quitamos los puntos de la lista con este atributo*/
+    position: absolute;
+    width: 100px;
+    padding: 0px;
+    padding-top: 0.2em;
+    margin-top: 0;
+    
+}
+
+
+
+.header_nav:hover ul, ul:hover{/* con esto. el ul se mostrara cuando pasemos sobre el header_nav que seria la imagen o el parrafo */
+    display: block;/* colocamos display block para que se muestre en pantalla lo que tenga el ul*/
+    text-align: end;
+
+
+}
+
+.header_nav li a:hover{
+    text-decoration: underline;
+
+}
+
+.Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.h2_title{
+    color: #ffffff;
+}
+
+.Section input{
+   border: 2px solid #ffffff;
+   border-radius: 2.5em;
+   color: white;
+   background-color: rgba(255,255,255,0.1);
+   font-family: 'Merriweather', serif;
+   font-size: 1.6em;
+   height: 2em;
+   padding: 0px 20px;
+   width: 70%;
+   outline: none;/* atributo para quitar la linea del borde cuando se activa el input */
+}
+::placeholder{/* pseudo elemento que sirve para darle color o diseño al placeholder, elemento que esta dentro los imputs */
+    color: #ffffffff;
+}
+
+/* La propiedad CSS overflow especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido
+ excedente en un elemento a nivel de bloque. Usando la propiedad overflow con un valor distinto a visible , valor por defecto, 
+ creará un nuevo contexto de formatos de bloques. */
+
+.carrusel{
+    width: 100%;
+   /* sirve para que se muestre un scroll en pantalla */
+    padding: 3em;
+    position: relative;
+}
+
+.carrusel_container{
+    white-space: nowrap;/* La propiedad white-space de CSS, determina cómo se maneja el
+     espacio en blanco dentro de un elemento. Para hacer que las palabras se dividan en sí mismas */
+    margin: 4em 0em;
+    padding-bottom: 1em;
+
+}
+
+.carrusel_item{
+    background-color: red ;
+    width: 15em;
+    height: 20em;
+    border-radius: 2em;
+    overflow: hidden;
+    margin-right: 1em;
+    display: inline-block;
+    cursor: pointer;/* sirve para darle estilos al cursor */
+    transition:  600ms all;/* sirve para el tiempo en transicion */
+    transform-origin: center left;/* sirve para mostrar el origen de la trancision que es de l centro a izquierda */
+    position: relative;
+
+}
+
+.carrusel_item:hover ~ .carrusel_item{/* la virgulilla sirve para que se quede con ciertos atributos, en este caso si se pasa el cursor se queda
+    con hover aunque no lo dejemos sobre y cambia cuando se pasa ssobre otro y se queda quieto*/
+transform: translate3d(100px, 0, 0);
+
+}
+
+.carrusel_container:hover .carrusel_item{
+    opacity: 0.3;/* sirve para opacar, y lo que estamos diciendo es que cuando en container se haga un hover, los demas de la 
+    clase item, se opaquen a 0,3 */
+}
+
+.carrusel_container:hover .carrusel_item:hover{
+    transform: scale(1.5);/* incrementa la hacer hover */
+    opacity: 1;/* cuando un elemento es seleccionado su opacidad es igual a la normal */
+
+}
+
+.carrusel_item_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carrusel_item_detalles_icon{
+    width:2em;
+    height: 2em;
+}
+
+.carrusel_item_detalles{
+   background: linear-gradient(to top, rgba(0,0,0, 0.9) 0%, rgba(0,0,0, 0) 100%);
+   font-size:1em;
+   color:white;
+   transition: 650ms opacity;
+   padding: 1em;
+   position: absolute;
+   opacity:0;  
+   bottom: 0;
+   right: 0;
+   left: 0;
+}
+
+.carrusel_item_detalles:hover{
+    opacity: 1;
+ 
+}
