@@ -98,11 +98,58 @@ a{
 .carrusel_container{
     white-space: nowrap;/* La propiedad white-space de CSS, determina cómo se maneja el
      espacio en blanco dentro de un elemento. Para hacer que las palabras se dividan en sí mismas */
+<<<<<<< HEAD
+    margin-top: 1em;
+    margin-bottom: 4em;
+    padding-top:6em;
+    padding-bottom: 6em;
+    overflow-x: scroll;
+    padding-right: 6.5em;
+   
+
+}
+
+
+.carrusel_container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+   /* Estilos barra (thumb) de scroll */
+  .carrusel_container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .carrusel_container::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  .carrusel_container::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+   /* Estilos track de scroll */
+  .carrusel_container::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+  }
+  
+  .carrusel_container::-webkit-scrollbar-track:hover, 
+  .carrusel_container::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+  
+
+
+
+=======
     margin: 4em 0em;
     padding-bottom: 1em;
 
 }
 
+>>>>>>> master
 .carrusel_item{
     background-color: red ;
     width: 15em;
@@ -115,6 +162,10 @@ a{
     transition:  600ms all;/* sirve para el tiempo en transicion */
     transform-origin: center left;/* sirve para mostrar el origen de la trancision que es de l centro a izquierda */
     position: relative;
+<<<<<<< HEAD
+    opacity: 0.4;
+=======
+>>>>>>> master
 
 }
 
@@ -132,6 +183,10 @@ transform: translate3d(100px, 0, 0);
 .carrusel_container:hover .carrusel_item:hover{
     transform: scale(1.5);/* incrementa la hacer hover */
     opacity: 1;/* cuando un elemento es seleccionado su opacidad es igual a la normal */
+<<<<<<< HEAD
+   
+=======
+>>>>>>> master
 
 }
 
